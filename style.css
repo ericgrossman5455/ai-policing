@@ -1,0 +1,423 @@
+/* CSS DOCUMENT */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
+
+
+/*------------------------------Generic--------------------------------*/
+
+    :root{font-family: sans-serif;}
+
+    h1{
+        font-family: proxima-nova, sans-serif;
+        font-weight: 500;
+        font-size: 3.3rem;
+        padding-bottom: 2.5rem;
+        color: #242424;
+        text-transform: uppercase;
+    }
+
+    h2{
+        font-family: proxima-nova, sans-serif;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: .4px;
+        padding-top: 2rem;
+        text-transform: uppercase;
+        color: #242424;
+    }
+
+    h3{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        padding-bottom: .5rem;
+        color: #242424;
+    }
+
+    h4{
+        font-family: proxima-nova, sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: .4px;
+        text-transform: uppercase;
+        color: #242424;
+    }
+
+    h5{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 300;
+        font-size: .9rem;
+        line-height: 1.2em;
+        color: #959595;
+        margin-bottom: 1.2rem;
+    }
+
+    p{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        color: #242424;
+    }
+
+    a{
+        color: #1E88C9;
+        text-decoration: none;
+        flex-wrap: nowrap;
+    }
+
+    button{
+        font-family: depot-new-web, sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        text-align: left;
+        cursor: pointer;
+        background: none;
+        border: none;
+        margin: .4rem 0 0 0;
+        padding: 0;
+        color: #1E88C9;
+    }
+
+    button:focus{outline: none;}
+
+    button::after{
+        content: " >";
+        transition: ease-out .2s;
+    }
+
+    button:hover::after{
+        margin-left: .3rem;
+    }
+
+    @media only screen and (max-width: 40rem) {
+        h1{font-size: 2.2rem;}
+        h3{font-size: 1.8rem}
+        h4{font-size: .9rem}
+        p{font-size: 1.1rem; line-height: 1.7}
+        button{font-size: 1.1rem; line-height: 1.7;}
+    }
+
+    .keyline{
+        width: 100%;
+        height: 1px;
+        max-width: 20rem;
+        background-color: #CFCFCF;
+        margin: 2rem auto 1.8rem;
+    }
+
+/*------------------------------Background--------------------------------*/
+
+    body{
+        background-image: url(assets/background.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    main{
+        background: rgb(240,240,240);
+        background: -moz-linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(240,240,240,0.9472382703081232) 60%, rgba(240,240,240,0.9332326680672269) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(240,240,240,0.9472382703081232) 60%, rgba(240,240,240,0.9332326680672269) 100%);
+        background: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(240,240,240,0.9472382703081232) 60%, rgba(240,240,240,0.9332326680672269) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0f0f0",endColorstr="#f0f0f0",GradientType=1);
+        background-attachment: fixed;
+        min-height: 100vh;
+        padding: 3.5rem 3vw 0 3vw;
+    }
+
+    @media only screen and (max-width: 40rem) {
+        main{padding: 2.5rem 0 0 0;}
+    }
+
+/*------------------------------Logo--------------------------------*/
+
+    .logo-wrapper{
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .logo{
+        max-width: 28rem;
+        min-width: 18rem;
+        width: 60vw;
+        margin: 0 0 3rem 1.2rem;
+    }
+
+    .logo img{
+        display: block;
+    }
+
+    @media only screen and (max-width: 40rem) {
+        .logo{margin-bottom: 2.5rem;}
+    }
+
+/*------------------------------Menus--------------------------------*/
+
+    .menu, .menu-mobile{
+        display: flex;
+        padding: 0 10px .9375rem 10px;
+        transition: ease-in-out .2s;
+    }
+
+    .menu-mobile{display: none;}
+
+    .menu h4{margin: 0 1rem;}
+
+    .inactive a{
+        color: #858585;
+        font-weight: 400;
+    }
+
+    .active{
+        font-weight: 600;
+        position: relative;
+    }
+
+    .active:after{
+        content: "";
+        position: absolute;
+        top: 1.75rem;
+        left: 0;
+        width: 100%;
+        height: .1875rem;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: #1E88C9;
+    }
+
+    @media only screen and (max-width: 60rem) {
+        .menu{display: none;}
+
+        .menu-mobile{display: flex;}
+    }
+
+    @media only screen and (max-width: 40rem) {
+        .menu h4{margin: 0 .6rem;}
+
+        .menu-mobile{padding-bottom: .875rem;}
+
+        .active:after{top: 1.5625rem;}
+    }
+
+    .js-sticky-menu{
+        position: sticky;
+        top: 0;
+        background: white;
+        box-shadow: 0px 7px 15px rgba(0,0,0,.06);
+        padding-top: 1.3rem;
+    }
+
+/*---------------------------Panels/Content-----------------------------*/
+
+    .panel-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 19rem;
+        column-gap: 2vw;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .secondary-panel{
+        position: sticky;
+        top: 1.3rem;
+        height: 35rem;
+    }
+
+    .content-wrapper, .contact-wrapper{
+        background-color: rgb(254, 254, 254);
+        border-radius: .3rem;
+        box-shadow: 0px 10px 20px rgba(0,0,0,.04);
+    }
+
+    .gray-bg{
+        background: rgb(247,247,247);
+        background: -moz-linear-gradient(180deg, rgba(247,247,247,1) 0%, rgba(254,254,254,1) 75%);
+        background: -webkit-linear-gradient(180deg, rgba(247,247,247,1) 0%, rgba(254,254,254,1) 75%);
+        background: linear-gradient(180deg, rgba(247,247,247,1) 0%, rgba(254,254,254,1) 75%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endColorstr="#fefefe",GradientType=1);
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        margin-top: -.3rem;
+    }
+
+    .content{padding: 9% 8%}
+
+    .contact{padding: 2.3rem;}
+
+    .contact p{line-height: 1.8;}
+
+    .contact button, .contact-page button{color: #242424;}
+
+    @media only screen and (max-height: 40rem) {
+        .secondary-panel{position: static}
+    }
+
+    @media only screen and (max-width: 60rem) {
+        .panel-wrapper{grid-template-columns: 1fr;}
+
+        .secondary-panel{display: none;}
+    }
+
+    @media only screen and (max-width: 40rem) {
+        .content{padding: 3.5rem 2rem;}
+
+        .content-wrapper, .contact-wrapper{border-radius: 0;}
+    }
+
+/*------------------Items (consultants, updates, etc)---------------------*/
+
+    .item-wrapper-1-col{
+        display: grid;
+        grid-row: auto;
+        row-gap: 5rem;
+        max-width: 45rem;
+    }
+
+    .item-wrapper-2-col{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5%;
+        row-gap: 4rem;
+    }
+
+    @media only screen and (max-width: 85rem) {
+        .item-wrapper-2-col{grid-template-columns: 1fr;}
+    }
+
+    @media only screen and (max-width: 60rem) {
+        .item-wrapper-2-col{grid-template-columns: 1fr 1fr;}
+    }
+
+    @media only screen and (max-width: 55rem) {
+        .item-wrapper-2-col{grid-template-columns: 1fr;}
+    }
+
+    .identity{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        margin-bottom: 1rem;
+    }
+
+    .identity img{margin-right: 1rem;}
+
+    .title{align-self: end;}
+
+    .title h3{
+        padding-bottom: 0;
+        max-width: 30rem;
+    }
+
+    .title h4{
+        font-weight: 400;
+        padding-bottom: .2rem;
+        max-width: 13rem;
+    }
+
+    /*-----Principal Investigators-----*/
+
+    .pi img{
+        width: 10rem;
+        height: 11rem;
+        object-fit: cover;
+        border-radius: .3rem;
+    }
+
+    @media only screen and (max-width: 40rem) {
+        .pi img{
+            width: 8rem;
+            height: 9rem;
+        }
+    }
+
+    /*---------Consultants----------*/
+
+    .consultant img{
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    @media only screen and (max-width: 40rem) {
+        .consultant img{
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    /*------------Updates-----------*/
+
+    .update{
+        border-left: 1px solid #CFCFCF;
+        padding-left: 3.5%;
+        padding-top: .4rem;
+    }
+
+    .update button{margin-top: .6rem;}
+
+    .update img{
+        width: 8rem;
+        height: 9rem;
+        object-fit: cover;
+        border-radius: .3rem;
+        align-self: center;
+    }
+
+    /* Improved image resizing, only applied to Chrome 29+ */
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+        .update img{
+            height: max(100%, 9rem);
+        }
+    }
+
+    @media only screen and (max-width: 40rem) {
+        .update img{
+            width: 6rem;
+            height: 7rem;
+        }
+
+        /* Improved image resizing, only applied to Chrome 29+ */
+        @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+            .update img{
+                height: max(100%, 7rem);
+            }
+        }
+
+        .update{margin-left: -2.8%;}
+    }
+
+/*------------------Contact (as its own page)-----------------------*/
+
+    .contact-page{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .contact-page button{width: 100%;}
+
+    .contact-page .keyline{
+        display: none;
+        max-width: 15rem;
+        margin-left: 0;
+    }
+
+    @media only screen and (max-width: 35rem) {
+        .contact-page, .contact-page .keyline{display: block;}
+    }
+
+/*------------------------------Footer--------------------------------*/
+
+    footer{text-align: center;}
+
+    .keyline-footer{
+        width: 3rem;
+        height: .1875rem;
+        border-radius: 5rem;
+        background-color: #1e87c999;
+        margin: 1.5rem auto .7rem;
+    }
