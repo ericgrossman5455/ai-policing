@@ -269,6 +269,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /*------------------Items (consultants, updates, etc)---------------------*/
 
+    .report-hero{
+        width: 40%;
+        float: right;
+        height: auto;
+        margin: .7rem 0 1rem 1.2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    @media only screen and (max-width: 30rem) {
+        .report-hero{
+            width: 100%;
+            margin: 0 0 1.5rem 0;
+        }
+    }
+
     .item-wrapper-1-col{
         display: grid;
         grid-row: auto;
