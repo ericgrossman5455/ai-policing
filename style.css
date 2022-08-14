@@ -387,30 +387,17 @@ main{
 
 .update img{
     width: 8rem;
-    height: 9rem;
+    height: 100%;
+    min-height: 100px;
+    max-height: 170px;
     object-fit: cover;
+    object-position: left;
     border-radius: .3rem;
-    align-self: center;
-}
-
-/* Improved image resizing, only applied to Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-    .update img{
-        height: max(100%, 9rem);
-    }
 }
 
 @media only screen and (max-width: 40rem) {
     .update img{
         width: 6rem;
-        height: 7rem;
-    }
-
-    /* Improved image resizing, only applied to Chrome 29+ */
-    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-        .update img{
-            height: max(100%, 7rem);
-        }
     }
 
     .update{margin-left: -2.8%;}
